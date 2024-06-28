@@ -8,25 +8,25 @@ class ContactBookApp:
         self.contacts = []
 
         # UI Elements
-        self.label = tk.Label(root, text="Contact Book",font=("Helvetica", 16))
+        self.label = tk.Label(root, text="Contact Book",font=("system", 20))
         self.label.grid(row=0, column=1, pady=10)
 
-        self.add_button = tk.Button(root, text="Add Contact", bg="pink",command=self.add_contact)
+        self.add_button = tk.Button(root,bd=15, text="Add Contact", bg="pink",command=self.add_contact)
         self.add_button.grid(row=1, column=0, padx=10, pady=10)
 
-        self.view_button = tk.Button(root, text="View Contacts", bg="pink",command=self.view_contacts)
+        self.view_button = tk.Button(root,bd=15, text="View Contacts", bg="pink",command=self.view_contacts)
         self.view_button.grid(row=1, column=1, padx=10, pady=10)
 
-        self.search_button = tk.Button(root, text="Search Contact", bg="pink",command=self.search_contact)
+        self.search_button = tk.Button(root, bd=15,text="Search Contact", bg="pink",command=self.search_contact)
         self.search_button.grid(row=1, column=2, padx=10, pady=10)
 
-        self.update_button = tk.Button(root, text="Update Contact", bg="pink",command=self.update_contact)
+        self.update_button = tk.Button(root, bd=15,text="Update Contact", bg="pink",command=self.update_contact)
         self.update_button.grid(row=2, column=0, padx=10, pady=10)
 
-        self.delete_button = tk.Button(root, text="Delete Contact", bg="pink",command=self.delete_contact)
+        self.delete_button = tk.Button(root,bd=15, text="Delete Contact", bg="pink",command=self.delete_contact)
         self.delete_button.grid(row=2, column=1, padx=10, pady=10)
 
-        self.exit_button = tk.Button(root, bg="powder blue",text="Exit", command=root.destroy)
+        self.exit_button = tk.Button(root,bd=15, bg="powder blue",text="Exit", command=root.destroy)
         self.exit_button.grid(row=2, column=2,padx=10, pady=10)
 
     def add_contact(self):
